@@ -16,19 +16,19 @@ const App = () => {
       <Navbar />
       <div className="content">    
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/Time-blog/">
             <Home />
           </Route>
-          <Route  path="/create">
+          <Route  path="/Time-blog/create">
             <Create />
           </Route>
-          <Route  path="/blogs/:id">
+          <Route  path="/Time-blog/blogs/:id">
             <BlogDetails />
           </Route>
-          <Route  path="/myblogs">
+          <Route  path="/Time-blog/myblogs">
             <MyBlogs />
           </Route>
-          <Route  path="/settings">
+          <Route  path="/Time-blog/settings">
             <Settings />
           </Route>
           <Route path="*">

@@ -34,7 +34,7 @@ const Create = () => {
         setIsPending(true);
 
         if(blog.body.length > 2000) {
-            history.push('/create');
+            history.push('/Time-blog/create');
             throw new Error('Your body is too long!');
         }
         
@@ -46,7 +46,7 @@ const Create = () => {
         }).then(() => {
             console.log('new blog added');
             setIsPending(false);
-            history.push(`/`);
+            history.push(`/Time-blog`);
         })
     }
     catch (err){

@@ -13,14 +13,14 @@ const BlogDetails = () => {
     const [dislike, setDislike] = useState(0);
     const [load, setLoad] = useState(false);
     const handleClick = () => {
-        fetch('http://localhost:8000/blogs/' + blog.id, {
+        fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
             method: 'DELETE',
             headers: {
                 "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"
             }
         })
         .then(() => {
-            history.push('/');
+            history.push('/Time-blog');
         })
     }
 
