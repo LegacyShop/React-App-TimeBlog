@@ -8,7 +8,7 @@ const useFetch = (url) => {
     useEffect(() => {
         const abortCont = new AbortController(); 
         fetch(url, { signal: abortCont.signal, headers: {
-            "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
+            "Secret-key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
         }} )
         .then(res => {
             console.log(res);

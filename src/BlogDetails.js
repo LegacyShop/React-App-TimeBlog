@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/blogs/' + id);
+    const { data: blog, error, isPending } = useFetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/1/blogs/' + id);
     const history = useHistory();
 
     
@@ -13,10 +13,10 @@ const BlogDetails = () => {
     const [dislike, setDislike] = useState(0);
     const [load, setLoad] = useState(false);
     const handleClick = () => {
-        fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
+        fetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/1/blogs/' + blog.id, {
             method: 'DELETE',
             headers: {
-                "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
+                "Secret-key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
             }
         })
         .then(() => {
@@ -40,11 +40,11 @@ const BlogDetails = () => {
         try {
             blog.vouches.like++;
             setLike(blog.vouches.like);
-            const response = await fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
+            const response = await fetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/1/blogs/' + blog.id, {
               method: 'PUT',
               body: JSON.stringify(blog),
               headers: {
-              "Content-type": "application/json; charset=UTF-8", "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
+              "Content-type": "application/json; charset=UTF-8", "Secret-key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
               }
             });
           } catch (error) {
@@ -56,11 +56,11 @@ const BlogDetails = () => {
         try {
             blog.vouches.dislike++;
             setDislike(blog.vouches.dislike);
-            const response = await fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
+            const response = await fetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/1/blogs/' + blog.id, {
               method: 'PUT',
               body: JSON.stringify(blog),
               headers: {
-              "Content-type": "application/json; charset=UTF-8", "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
+              "Content-type": "application/json; charset=UTF-8", "Secret-key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"
               }
             });
           } catch (error) {
