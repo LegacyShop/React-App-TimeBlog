@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 
 const MyBlogs = () => {
 
-    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
+    const { data: blogs, isPending, error } = useFetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/');
     
     const filterBlogs = (blogs_) => {
         blogs_.map((blog, index) => {

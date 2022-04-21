@@ -38,9 +38,10 @@ const Create = () => {
             throw new Error('Your body is too long!');
         }
         
-        fetch('http://localhost:8000/blogs', {
+        fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/', {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            headers: {"Content-Type": "application/json", "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"},
+
             body: JSON.stringify(blog)
         }).then(() => {
             console.log('new blog added');

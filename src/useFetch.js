@@ -6,9 +6,10 @@ const useFetch = (url) => {
     const [error, setError]  = useState(null);
 
     useEffect(() => {
-        const abortCont = new AbortController();
-
-        fetch(url, { signal: abortCont.signal })
+        const abortCont = new AbortController(); 
+        fetch(url, { signal: abortCont.signal, headers: {
+            "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"
+        }} )
         .then(res => {
             console.log(res);
             if(!res.ok) {

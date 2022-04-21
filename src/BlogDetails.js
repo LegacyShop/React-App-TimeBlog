@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+    const { data: blog, error, isPending } = useFetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + id);
     const history = useHistory();
 
     
@@ -14,7 +14,10 @@ const BlogDetails = () => {
     const [load, setLoad] = useState(false);
     const handleClick = () => {
         fetch('http://localhost:8000/blogs/' + blog.id, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"
+            }
         })
         .then(() => {
             history.push('/');
@@ -37,11 +40,11 @@ const BlogDetails = () => {
         try {
             blog.vouches.like++;
             setLike(blog.vouches.like);
-            const response = await fetch('http://localhost:8000/blogs/' + blog.id, {
+            const response = await fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
               method: 'PUT',
               body: JSON.stringify(blog),
               headers: {
-              "Content-type": "application/json; charset=UTF-8"
+              "Content-type": "application/json; charset=UTF-8", "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"
               }
             });
           } catch (error) {
@@ -53,11 +56,11 @@ const BlogDetails = () => {
         try {
             blog.vouches.dislike++;
             setDislike(blog.vouches.dislike);
-            const response = await fetch('http://localhost:8000/blogs/' + blog.id, {
+            const response = await fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/' + blog.id, {
               method: 'PUT',
               body: JSON.stringify(blog),
               headers: {
-              "Content-type": "application/json; charset=UTF-8"
+              "Content-type": "application/json; charset=UTF-8", "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"
               }
             });
           } catch (error) {
