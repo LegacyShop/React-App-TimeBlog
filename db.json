@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "blogs": [
       {
@@ -15,3 +16,22 @@
       }
     ]
   }
+=======
+{
+  "blogs": [
+    {
+      "title": "Spider Man Across Spider Verse Part 1",
+      "body": "Breaking news! Spider Man across spider verse is moving forward to 2023! OMGF! ",
+      "author": "mario",
+      "date": "21 April 2022, at 18:40",
+      "dateRaw": "2022-04-21T13:40:22.802Z",
+      "vouches": {
+        "like": 4,
+        "dislike": 7
+      },
+      "views": 0,
+      "id": 1
+    }
+  ]
+}
+>>>>>>> 72166a7c2d342b4e77623e4c0f63ed7b1063302a
