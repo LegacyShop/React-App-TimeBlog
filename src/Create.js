@@ -38,7 +38,7 @@ const Create = () => {
             throw new Error('Your body is too long!');
         }
         
-        fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/', {
+        fetch('https://api.jsonbin.io/b/6261739dc5284e311550b17c/blogs/', {
             method: 'POST',
             headers: {"Content-Type": "application/json", "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"},
 
