@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Time-blog/static/css/main.a8bdab1c.css",
-    "main.js": "/Time-blog/static/js/main.b1a3888f.js",
+    "main.js": "/Time-blog/static/js/main.07f8628b.js",
     "index.html": "/Time-blog/index.html",
     "main.a8bdab1c.css.map": "/Time-blog/static/css/main.a8bdab1c.css.map",
-    "main.b1a3888f.js.map": "/Time-blog/static/js/main.b1a3888f.js.map"
+    "main.07f8628b.js.map": "/Time-blog/static/js/main.07f8628b.js.map"
   },
   "entrypoints": [
     "static/css/main.a8bdab1c.css",
-    "static/js/main.b1a3888f.js"
+    "static/js/main.07f8628b.js"
   ]
 }
