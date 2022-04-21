@@ -40,7 +40,7 @@ const Create = () => {
         
         fetch('https://my-json-server.typicode.com/xTimeStudio/Time-blog/blogs/', {
             method: 'POST',
-            headers: {"Content-Type": "application/json", "API-KEY": "f5563022-c412-43d7-b2d1-82c2ee10bec4"},
+            headers: {"Content-Type": "application/json", "X-Master-Key": "$2b$10$6tCw6s1DXgg86J.Vpu2HOeJnEE93iHNj5NUAXtr0vL3sKLwoFOidW"},
 
             body: JSON.stringify(blog)
         }).then(() => {
